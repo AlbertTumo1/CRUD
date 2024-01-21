@@ -4,6 +4,8 @@ const path = require("path");
 const bodyParser = require('body-parser');
 const app = express();
 
+// Test Config
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -19,3 +21,4 @@ app.post('/add-name', (req, res) => {
  });
 
 app.listen(3000, () => console.log("Example is running on port 3000"));
+
