@@ -4,8 +4,8 @@ const submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", submitForm);
 
-async function submitForm() {
-    fetch("http://localhost:3000/add-name", {
+function submitForm() {
+    fetch("http://localhost:3000/add-info", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
