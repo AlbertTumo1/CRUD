@@ -1,16 +1,21 @@
 const name = document.getElementById("name");
-const age = document.getElementById("age");
-const email = document.getElementById("email");
+const price = document.getElementById("price");
+const image = document.getElementById("image");
+const uuid = document.getElementById("uuid");
+const description = document.getElementById("description");
+
 const submitBtn = document.getElementById("submit");
 
-submitBtn.addEventListener("click", submitForm);
+submitBtn.addEventListener("click", createProduct);
 
-function submitForm() {
+function createProduct() {
     fetch("http://localhost:3000/add-user", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({name:name.value, age:age.value, email:email.value})        
-    })
+        body: JSON.stringify({name: name.value, price: price.value, image: image.value, uuid: uuid.value, description: description.value})
+    });
+
+    // location.reload();
 }

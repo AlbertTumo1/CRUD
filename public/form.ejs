@@ -8,23 +8,44 @@
 </head>
 <body>
     <form>
-        <p>Register</p>
-        <input type="text" required name="name" id="name" placeholder="Please type your name">
-        <input type="text" required name="email" id="email" placeholder="Please type your Email">
-        <input type="number" name="age" id="age" placeholder="Please type your age"><br><br>
+        <p>Product</p>
+        <input type="text" required name="name" id="name" placeholder="Please type name of product">
+        <input type="number" required name="price" id="price" placeholder="Please type price of product">
+        <input type="text" name="image" id="image" placeholder="Please type image URL of product">
+        <input type="text" name="uuid" id="uuid" placeholder="Please type UUID of product">
+        <input type="description" name="description" id="description" placeholder="Please type description of product"><br>
+
         <input id="submit" type="submit">
     </form>
 
-    <% users.forEach(user => { %>
-        <li>
-            <p><%= user.name %></p>
-            <p><%= user.email %></p>
-            <p><%= user.age %></p>
-            <button>Update</button>
-            <button>Delete</button>
-        </li>
 
-    <% }) %>
+        <table>
+           <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image URL</th>
+            <th>UUID</th>
+            <th>Description</th>
+            <th>Update Button</th>
+            <th>Delete Button</th>
+           </tr>
+           <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.name %></td>
+                <td><%= product.price %></td>
+                <td><%= product.image %></td>
+                <td><%= product.uuid %></td>
+                <td><%= product.description %></td>
+                <td>
+                    <a href="<%= product._id %>"><button>Update Product</button></a>
+                </td>
+                <td>
+                    <a><button ">Delete Product</button></a>
+                </td>
+            </tr>
+           <% }); %>
+        </table>
+
 
     <script src="script.js"></script>
 
