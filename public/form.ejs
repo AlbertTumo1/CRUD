@@ -15,6 +15,17 @@
         <input id="submit" type="submit">
     </form>
 
+    <% users.forEach(user => { %>
+        <li>
+            <p><%= user.name %></p>
+            <p><%= user.email %></p>
+            <p><%= user.age %></p>
+            <button>Update</button>
+            <button>Delete</button>
+        </li>
+
+    <% }) %>
+
     <script src="script.js"></script>
 
 </body>
