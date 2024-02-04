@@ -10,6 +10,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap:15px;
     padding:20px 60px 40px 60px;
     background:white;
@@ -25,8 +26,8 @@ form > p {
 }
 
 form > input {
-    min-width:250px;
-    max-width:400px;
+    min-width:325px;
+    max-width:450px;
     height:40px;
     padding-left:8px;
     border-radius:6px;
@@ -34,14 +35,14 @@ form > input {
     font-size:15px;
 }
 
-form > input[type="submit"] {
+form > input[type="button"], input[type="submit"] {
     background:rgb(20, 129, 197);
     border:1px solid rgb(20, 129, 197);
     color:white;
     cursor:pointer;
 }
 
-form > input[type="submit"]:hover {
+form > input[type="button"], input[type="submit"]:hover {
     background:rgb(51, 149, 210);
     border:1px solid rgb(51, 149, 210);
 }

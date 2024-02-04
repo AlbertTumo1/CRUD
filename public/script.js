@@ -9,13 +9,11 @@ const submitBtn = document.getElementById("submit");
 submitBtn.addEventListener("click", createProduct);
 
 function createProduct() {
-    fetch("http://localhost:3000/add-user", {
+    fetch("http://localhost:3000/add-product", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({name: name.value, price: price.value, image: image.value, uuid: uuid.value, description: description.value})
     });
-
-    // location.reload();
 }

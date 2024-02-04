@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <form>
@@ -15,7 +15,7 @@
         <input type="text" name="uuid" id="uuid" placeholder="Please type UUID of product">
         <input type="description" name="description" id="description" placeholder="Please type description of product"><br>
 
-        <input id="submit" type="submit">
+        <input id="submit" type="button" value="Add Product">
     </form>
 
 
@@ -37,10 +37,10 @@
                 <td><%= product.uuid %></td>
                 <td><%= product.description %></td>
                 <td>
-                    <a href="<%= product._id %>"><button>Update Product</button></a>
+                    <a href="/update/<%= product._id %>"><button>Update Product</button></a>
                 </td>
                 <td>
-                    <a><button ">Delete Product</button></a>
+                    <a href="/delete/<%= product._id %>"><button ">Delete Product</button></a>
                 </td>
             </tr>
            <% }); %>

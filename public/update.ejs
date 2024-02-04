@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <p>Product</p>
-        <input type="text" required name="name" id="name" placeholder="Please type name of product">
-        <input type="number" required name="price" id="price" placeholder="Please type price of product">
-        <input type="text" name="image" id="image" placeholder="Please type image URL of product">
-        <input type="text" name="uuid" id="uuid" placeholder="Please type UUID of product">
-        <input type="description" name="description" id="description" placeholder="Please type description of product"><br>
-
+    <form method="POST" action="/update-product/">
+        <p>Edit Product <%= product.name %></p>
+        <input type="hidden" required name="id" id="id" value="<%= product._id %>" placeholder="Please type name of product">
+        <input type="text" required name="name" id="name" value="<%= product.name %>" placeholder="Please type name of product">
+        <input type="number" required name="price" id="price" value="<%= product.price %>"  placeholder="Please type price of product">
+        <input type="text" name="image" id="image" value="<%= product.image %>"  placeholder="Please type image URL of product">
+        <input type="text" name="uuid" id="uuid" value="<%= product.uuid %>"  placeholder="Please type UUID of product">
+        <input type="description" name="description" id="description" value="<%= product.description %>"  placeholder="Please type description of product"><br>
         <input id="submit" type="submit">
     </form>
 </body>
